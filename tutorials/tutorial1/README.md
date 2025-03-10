@@ -8,10 +8,25 @@ Setting Up and Basic Object Detection (Table Tennis)
 ## Environment Setup (5-7 minutes):
 - In the root folder /input_video/ is two clips where we can test the code against
 - Show how to install Python and necessary libraries (pip install ultralytics).
-- 
+- Install a virtual environment for python3 first 
 ```
-sudo apt-get install pip
+sudo apt install python3-venv
+```
+- Create a virtual environment after that
+```
+python3 -m venv tttrace_env
+```
+- Activate the environment
+```
+source tttrace_env/bin/activate
+```
+- Now install ultralytics
+```
 pip install ultralytics
+```
+- To exit from the virtual environment
+```
+deactivate
 ```
 - Explain the project folder structure (input videos, output folders).
 - Show sample images and videos of table tennis.
