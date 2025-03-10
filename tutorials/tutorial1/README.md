@@ -8,6 +8,11 @@ Setting Up and Basic Object Detection (Table Tennis)
 ## Environment Setup (5-7 minutes):
 - We need to find a video for table tennis and also take a screenshot from it
 - Show how to install Python and necessary libraries (pip install ultralytics).
+- 
+```
+sudo apt-get install pip
+pip install ultralytics
+```
 - Explain the project folder structure (input videos, output folders).
 - Show sample images and videos of table tennis.
 ## Basic YOLO Inference (10-12 minutes):
