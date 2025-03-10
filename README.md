@@ -9,13 +9,35 @@ Table Tennis Trace - this is a repo inspired for AI/ML learning
 - Adapting the model to table tennis.
 
 ## Fine-Tuning the Ball Detection Model:
+- Understanding the need for fine-tuning.
+- Finding or creating a table tennis ball dataset (Roboflow equivalent).
+- Preparing the dataset for training.
+- Training a custom YOLO model (YOLOv5) on the ball dataset.
+- Evaluating and comparing the fine-tuned model's performance.
 
 ## Object Tracking and Player Identification:
+- Understanding the concept of object tracking.
+- Using YOLO's tracking capabilities.
+- Assigning unique IDs to players.
+- Applying tracking to table tennis player movements.
+- Understanding the benifits of tracking for table tennis.
 
 ## Court/Table Keypoint Detection (Using PyTorch):
+- Understanding the importance of keypoint detection.
+- Acquiring or creating a table keypoint dataset.
+- Building a custom PyTorch dataset.
+- Training a CNN (ResNet50) to detect keypoints.
+- Understanding loss functions and optimizers.
 
 ## Integrating Models and Calculating Metrics (Ball Speed, Player Movement):
+- Combining the player detection, ball detection, and keypoint detection models.
+- Calculating ball speed and player movement using detected data.
+- Determining if the ball is "in" or "out" using keypoints.
+- Calculating player coverage.
 
 ## Advanced Analysis and Refinement:
-
+- Analysing shot count, and shot speed.
+- Refining the models for better accuracy.
+- Visualizing the results.
+- Exploring advanced analysis techniques (e.g., player positioning, shot patterns).
 
