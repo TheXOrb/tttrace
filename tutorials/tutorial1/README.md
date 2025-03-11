@@ -6,6 +6,8 @@ Setting Up and Basic Object Detection (Table Tennis)
 - Introduce the tools we'll be using: Python, Ultralytics YOLO.
 - Explain the basic concepts of object detection (bounding boxes, confidence scores).
 ## Environment Setup (5-7 minutes):
+- Explain the project folder structure (input videos, output folders).
+- - Test
 - In the root folder /input_video/ is two clips where we can test the code against
 - Show how to install Python and necessary libraries (pip install ultralytics).
 - Install a virtual environment for python3 first 
@@ -28,7 +30,7 @@ pip install ultralytics
 ```
 deactivate
 ```
-- Explain the project folder structure (input videos, output folders).
+
 - Show sample images and videos of table tennis.
 ## Basic YOLO Inference (10-12 minutes):
 - Demonstrate how to load a pre-trained YOLO model (YOLOv8).
