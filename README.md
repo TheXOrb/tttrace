@@ -13,6 +13,8 @@ Detect and track players and table tennis balls in a video.
 - Count player shots and measure shot speed
 - Train two convolutional neural networks (YOLO and custom CNN)
 
+## Tutorials
+- In the folder /tutorial/ there are walk trough to do the same things that we have done in the repo
 
 
 # CC Attribution 4.0 International
