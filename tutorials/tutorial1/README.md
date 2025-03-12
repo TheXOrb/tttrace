@@ -67,6 +67,9 @@ for box in result[0].boxes:
 - Demonstrate how to load a pre-trained YOLO model (YOLOv8).
 - Run inference on a sample table tennis image.
 - Explain the output: bounding boxes, class names, confidence scores.
+  - Around each object that is detected there is a bounding box
+  - Each bouding box have a class name
+  - Each bounding box also have the confidence score that ranges from 0-1 where higher number is more specific to the trained subject 
 - Show how to save the detection results.
 ## Video Inference and Initial Observations (5-8 minutes):
 - Run YOLO inference on a sample table tennis video.
