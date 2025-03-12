@@ -63,6 +63,13 @@ for box in result[0].boxes:
   print(box)
 ```
 - After you run this the second time you will have a new folder called /predict2/
+
+- Demonstrate how to load a pre-trained YOLO model (YOLOv8).
+- Run inference on a sample table tennis image.
+- Explain the output: bounding boxes, class names, confidence scores.
+- Show how to save the detection results.
+## Video Inference and Initial Observations (5-8 minutes):
+- Run YOLO inference on a sample table tennis video.
 - Now we can use this little snippet to change the .png to the .mp4 to run it on the video like this
 ```
 # To run it on an image - give it the image path, we also want to save it
@@ -70,12 +77,8 @@ for box in result[0].boxes:
 result = model.predict('input_videos/image.mp4', save=True)
 # After this code is runned - it will create a new folder called /runs/detect/predict3/image.mp4
 ``` 
-- Demonstrate how to load a pre-trained YOLO model (YOLOv8).
-- Run inference on a sample table tennis image.
-- Explain the output: bounding boxes, class names, confidence scores.
-- Show how to save the detection results.
-## Video Inference and Initial Observations (5-8 minutes):
-- Run YOLO inference on a sample table tennis video.
 - Discuss the initial detection results.
+- We will see that the table tennis ball is not recognised as a sports ball many times
 - Highlight potential challenges (e.g., fast-moving ball, overlapping players).
+- What we will need now is to finetune the model so it can detect the small table tennis ball
 - Adaptation to table tennis, explain the difference in court size, ball size, and player movement compared to tennis.
