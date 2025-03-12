@@ -83,6 +83,6 @@ result = model.predict('input_videos/image.mp4', save=True)
 - Discuss the initial detection results.
 - We will see that the table tennis ball is not recognised as a sports ball many times
 - Highlight potential challenges (e.g., fast-moving ball, overlapping players).
-- Adaptation to table tennis, explain the difference in court size, ball size, and player movement compared to tennis.
+- Adaptation to table tennis.
 - In the next tutorial we will - Finetune the model so it can detect the small table tennis ball
 
