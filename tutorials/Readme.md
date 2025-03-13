@@ -4,7 +4,7 @@
 🟡 In progress  
 ✅ Complete  
 
-| Progress writing | Progress recording | Shortname | Requirement |
+| Writing | Video | Shortname | Requirement |
 |---|---|---|---|
 | ✅ | 🟡 | HL1 | The vertical slice can start without any more services running |
 
