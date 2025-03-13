@@ -15,7 +15,7 @@ Fine-Tuning the Ball Detection Model
 !pip install roboflow
 
 from roboflow import Roboflow
-rf = Roboflow(api_key="0pkjD2Fn5LzmYdSaDjRB")
+rf = Roboflow(api_key="API_KEY")
 project = rf.workspace("datasets-dl").project("imagenet-1k_tennis-table-ball")
 version = project.version(6)
 dataset = version.download("yolov5")
