@@ -66,6 +66,8 @@ model.predict('input_videos/image.png', save=True)
 ```
 python3 yolo_inference.py
 ```
+- Now go to your directory /runs/detect/predict/ - for me the picture was a .jpg file instead. You will also see in the CLI what the YOLO model has detected
+- Look at the picture and you will see the boxes around the objects
 - If you looked at the picture that is created you will find rectangles with the detections that are found in the images with the Yolo model
 - We will now extend the code and improve it - complete code from the above and extended
 ```
