@@ -10,11 +10,13 @@
 
 ## Tutorial 1
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
-🟡 Installing necessary libraries (Ultralytics).  
-🟡 Understanding YOLO and its basic usage.  
-🟡 Running inference on a sample image and video.  
-🟡 Analyzing the output (bounding boxes, confidence scores, class names).  
-🟡 Adapting the model to table tennis.  
+| Writing | Video | Shortname | Requirement |
+| ✅ | 🟡 | TL1 | Installing necessary libraries (Ultralytics) |
+| ✅ | 🟡 | TL2 | Understanding YOLO and its basic usage |
+| ✅ | 🟡 | TL3 | Running inference on a sample image and video |
+| ✅ | 🟡 | TL4 | Analyzing the output (bounding boxes, confidence scores, class names)  |
+| ✅ | 🟡 | TL5 | Adapting the model to table tennis |
+
 
 ## Tutorial 2
 ### Fine-Tuning the Ball Detection Model:
