@@ -95,4 +95,10 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 ```
 !yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
 ```
+- This took me 10 minutes - with only 1 epoch and low image size
+- Now we have got files inside /runs/detect/weights that we will use
+- Copy the files last.pt and best.pt to models
+- 
 ## Evaluating and comparing the fine-tuned model's performance.
+- now we can use this in the inferior file that we created from the beginning in the first tutorial
+- 
