@@ -60,6 +60,12 @@ model = YOLO('yolov8x')
 model.predict('input_videos/image.png', save=True)
 # After this code is runned - it will create a new folder called /runs/detect/predict/image.png
 ```
+- Depending how you will do if you run in Visual Studio Code or you run it in the CLI
+- You will need to have a directory with the input_videos/image.png else it will not work
+- For the CLI - this will now download the YOLOv8x model that will be used
+```
+python3 yolo_inference.py
+```
 - If you looked at the picture that is created you will find rectangles with the detections that are found in the images with the Yolo model
 - We will now extend the code and improve it - complete code from the above and extended
 ```
