@@ -86,7 +86,6 @@ for box in result[0].boxes:
   print(box)
 ```
 - After you run this the second time you will have a new folder called /predict2/
-
 - Demonstrate how to load a pre-trained YOLO model (YOLOv8).
 - Run inference on a sample table tennis image.
 - Explain the output: bounding boxes, class names, confidence scores.
