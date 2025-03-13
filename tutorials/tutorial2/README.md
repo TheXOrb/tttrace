@@ -13,6 +13,14 @@ mkdir training
 ```
 nano table_tennis_ball_detector_training.ipynb
 ```
+- If you dont have jupyter installed on the machine you need to install it
+```
+pip3 install jupyter
+```
+- Try to run the file
+```
+jupyter notebook table_tennis_ball_detector_training.ipynb
+```
 - We need to find a dataset to fill the notebook that we can utilise
 ## Finding or creating a table tennis ball dataset (Roboflow equivalent).
 - For this part you need an account on Roboflow - where you can download the dataset
