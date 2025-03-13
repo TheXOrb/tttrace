@@ -19,9 +19,11 @@ pip3 install jupyter
 ```
 - Try to run the file
 ```
-jupyter notebook table_tennis_ball_detector_training.ipynb
+jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ipynb
+
 ```
 - We need to find a dataset to fill the notebook that we can utilise
+
 ## Finding or creating a table tennis ball dataset (Roboflow equivalent).
 - For this part you need an account on Roboflow - where you can download the dataset
 - Looking for a dataset in Roboflow from similar angles as in the video and I found this one
@@ -29,15 +31,58 @@ jupyter notebook table_tennis_ball_detector_training.ipynb
 - Click on the model for example YoloV5 - and then look that you have download dataset
 - Then you can choose click download code and YoloV5 Pytorch is fine and press continue
 - In a Jupyter notebook copy and paste the code from the dataset
+- - In the file create the following code 
 ```
-!pip install roboflow
-
-from roboflow import Roboflow
-rf = Roboflow(api_key="API_KEY")
-project = rf.workspace("datasets-dl").project("imagenet-1k_tennis-table-ball")
-version = project.version(6)
-dataset = version.download("yolov5")
-```
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!pip install roboflow\n",
+    "!pip install ultralytics"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Get Dataset\n",
+    "\n",
+    "from roboflow import Roboflow\n",
+    "rf = Roboflow(api_key=\"API_KEY\")\n",
+    "project = rf.workspace(\"datasets-dl\").project(\"imagenet-1k_tennis-table-ball\")\n",
+    "version = project.version(6)\n",
+    "dataset = version.download(\"yolov5\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}```
 - 
 - https://universe.roboflow.com/madianou-kqrfk/table-tennis-ball-detection/dataset/1
 - 
