@@ -101,7 +101,8 @@ for box in result[0].boxes:
 # Store the output in a varible 
 result = model.predict('input_videos/image.mp4', save=True)
 # After this code is runned - it will create a new folder called /runs/detect/predict3/image.mp4
-``` 
+```
+- The file is in the output detect folder - for me i got an .avi file called image.avi
 - Discuss the initial detection results.
 - We will see that the table tennis ball is not recognised as a sports ball many times
 - We will see that the table tennis racket is detected as baseball glove
