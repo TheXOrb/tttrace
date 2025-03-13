@@ -104,7 +104,7 @@ result = model.predict('input_videos/image.mp4', save=True)
 ``` 
 - Discuss the initial detection results.
 - We will see that the table tennis ball is not recognised as a sports ball many times
+- We will see that the table tennis racket is detected as baseball glove
 - Highlight potential challenges (e.g., fast-moving ball, overlapping players).
-- Adaptation to table tennis.
-- In the next tutorial we will - Finetune the model so it can detect the small table tennis ball
+- In the next tutorial we will - Finetune the model so it can detect the small table tennis ball and also the table tennis racket
 
