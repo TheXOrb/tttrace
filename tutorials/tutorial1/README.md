@@ -31,6 +31,21 @@ pip install ultralytics
 deactivate
 ```
 - Show sample images and videos of table tennis.
+
+## Problem with space because of PIP and Ultralytics
+```
+Configure pip Cache Location:
+
+You can configure pip to use a different cache directory on /dev/sdb.
+Steps:
+Create a directory on /dev/sdb for the pip cache:
+sudo mkdir -p /mnt/sdb/pip-cache
+Set the PIP_CACHE_DIR environment variable:
+export PIP_CACHE_DIR=/mnt/sdb/pip-cache
+Add this line to your .bashrc file (or equivalent) to make it permanent:
+echo 'export PIP_CACHE_DIR=/mnt/sdb/pip-cache' >> ~/.bashrc
+Run source ~/.bashrc
+```
 ## Basic YOLO Inference (10-12 minutes):
 - Create a new file in the folder called yolo_inference.py
 ```
