@@ -4,6 +4,10 @@
 🟡 In progress  
 ✅ Complete  
 
+| Progress | Shortname | Requirement |
+|---|---|---|
+| ✅ | HL1 | The vertical slice can start without any more services running |
+
 ## Tutorial 1
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
 🟡 Installing necessary libraries (Ultralytics).  
