@@ -11,6 +11,7 @@
 ## Tutorial 1
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
 | Writing | Video | Shortname | Requirement |
+|---|---|---|---|
 | ✅ | 🟡 | TL1 | Installing necessary libraries (Ultralytics) |
 | ✅ | 🟡 | TL2 | Understanding YOLO and its basic usage |
 | ✅ | 🟡 | TL3 | Running inference on a sample image and video |
