@@ -4,8 +4,8 @@
 🟡 In progress  
 ✅ Complete  
 
-| Progress | Shortname | Requirement |
-|---|---|---|
+| Progress | Progress | Shortname | Requirement |
+|---|---|---|---|
 | ✅ | HL1 | The vertical slice can start without any more services running |
 
 ## Tutorial 1
