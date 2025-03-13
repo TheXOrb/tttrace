@@ -84,6 +84,8 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
  "nbformat_minor": 5
 }
 ```
+- After the file hase been runned - there will be a new folder create called /imagenet-1k_tennis-table-ball/
+- If we want to train the dataset we need to have the exact same folder inside the folder in this case /imagenet-1k_tennis-table-ball/imagenet-1k_tennis-table-ball
 - 
 - https://universe.roboflow.com/madianou-kqrfk/table-tennis-ball-detection/dataset/1
 - 
