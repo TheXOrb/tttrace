@@ -91,4 +91,8 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 - 
 ## Preparing the dataset for training.
 ## Training a custom YOLO model (YOLOv5) on the ball dataset.
+-
+```
+!yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
+```
 ## Evaluating and comparing the fine-tuned model's performance.
