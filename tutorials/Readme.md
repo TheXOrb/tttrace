@@ -1,8 +1,8 @@
 # Tutorials directory
 ### Progress indication
-💤 Not started
-🟡 In progress
-✅ Complete
+💤 Not started  
+🟡 In progress  
+✅ Complete  
 
 ## Tutorial 1
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
@@ -22,11 +22,11 @@
 
 ## Tutorial 3
 ### Object Tracking and Player Identification:
-💤 Understanding the concept of object tracking.
-💤 Using YOLO's tracking capabilities.
-💤 Assigning unique IDs to players.
-💤 Applying tracking to table tennis player movements.
-💤 Understanding the benifits of tracking for table tennis.
+💤 Understanding the concept of object tracking.  
+💤 Using YOLO's tracking capabilities.  
+💤 Assigning unique IDs to players.  
+💤 Applying tracking to table tennis player movements.  
+💤 Understanding the benifits of tracking for table tennis.  
 
 ## Tutorial 4
 ### Court/Table Keypoint Detection (Using PyTorch):
