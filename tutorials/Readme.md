@@ -1,11 +1,16 @@
 # Tutorials directory
+### Progress indication
+💤 Not started
+🟡 In progress
+✅ Complete
+
 ## Tutorial 1
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
-- Installing necessary libraries (Ultralytics).
-- Understanding YOLO and its basic usage.
-- Running inference on a sample image and video.
-- Analyzing the output (bounding boxes, confidence scores, class names).
-- Adapting the model to table tennis.
+🟡 Installing necessary libraries (Ultralytics).
+🟡 Understanding YOLO and its basic usage.
+🟡 Running inference on a sample image and video.
+🟡 Analyzing the output (bounding boxes, confidence scores, class names).
+🟡 Adapting the model to table tennis.
 
 ## Tutorial 2
 ### Fine-Tuning the Ball Detection Model:
@@ -17,11 +22,11 @@
 
 ## Tutorial 3
 ### Object Tracking and Player Identification:
-- Understanding the concept of object tracking.
-- Using YOLO's tracking capabilities.
-- Assigning unique IDs to players.
-- Applying tracking to table tennis player movements.
-- Understanding the benifits of tracking for table tennis.
+💤 Understanding the concept of object tracking.
+💤 Using YOLO's tracking capabilities.
+💤 Assigning unique IDs to players.
+💤 Applying tracking to table tennis player movements.
+💤 Understanding the benifits of tracking for table tennis.
 
 ## Tutorial 4
 ### Court/Table Keypoint Detection (Using PyTorch):
