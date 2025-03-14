@@ -48,7 +48,8 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 !yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
 ```
 - This took me 10 minutes - with only 1 epoch and low image size
-- 20 epochs completed in 0.335 hours.
+- 20 epochs completed in 0.335 hours. - this is on colabs
+- 100 epochs completed in 1.265 hours. - this is on colabs
 - Now we have got files inside /runs/detect/weights that we will use
 - Copy the files last.pt and best.pt to models
 - 
