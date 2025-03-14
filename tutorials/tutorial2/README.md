@@ -31,59 +31,6 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 - Click on the model for example YoloV5 - and then look that you have download dataset
 - Then you can choose click download code and YoloV5 Pytorch is fine and press continue
 - In a Jupyter notebook copy and paste the code from the dataset
-- - In the file create the following code 
-```
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "!pip install roboflow\n",
-    "!pip install ultralytics"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Get Dataset\n",
-    "\n",
-    "from roboflow import Roboflow\n",
-    "rf = Roboflow(api_key=\"API_KEY\")\n",
-    "project = rf.workspace(\"datasets-dl\").project(\"imagenet-1k_tennis-table-ball\")\n",
-    "version = project.version(6)\n",
-    "dataset = version.download(\"yolov5\")"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.10.12"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
-```
 - After the file hase been runned - there will be a new folder create called /imagenet-1k_tennis-table-ball/
 - If we want to train the dataset we need to have the exact same folder inside the folder in this case /imagenet-1k_tennis-table-ball/imagenet-1k_tennis-table-ball
 - 
@@ -91,7 +38,12 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 - 
 ## Preparing the dataset for training.
 ## Training a custom YOLO model (YOLOv5) on the ball dataset.
--
+- If you want to train the dataset, a strong advice is to use colab.research.google.com where you have free GPU resources.
+- With colab you can also use larger models - this will take some times - for me it took around 40 seconds per each epoch
+```
+!yolo task=detect mode=train model=yolov5l6u.pt data={dataset.location}/data.yaml epochs=100 imgsz=640
+```
+- If you want to run it locally and if you not have GPU you can use the below code for the training
 ```
 !yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
 ```
