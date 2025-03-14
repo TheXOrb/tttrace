@@ -1,64 +1,109 @@
-# Tutorial 2
-Fine-Tuning the Ball Detection Model
+# Tutorial 2: Fine-Tuning the Ball Detection Model
 
-## Understanding the need for fine-tuning.
-- As we saw in the video the table tennis ball was not detected in so many frames
-- To get a higher sensitivity in the recognition we need to have a finetuned dataset especially for the table tennis ball
-## Create a jupyter notebook
-- We create a new folder called /training/
-```
-mkdir training
-```
-- We create a notebook inside here called table_tennis_ball_detector_training.ipnyb
-```
-nano table_tennis_ball_detector_training.ipynb
-```
-- If you dont have jupyter installed on the machine you need to install it
-```
-pip3 install jupyter
-```
-- Try to run the file
-```
-jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ipynb
+## Understanding the Need for Fine-Tuning
+- In our initial detection attempts, the table tennis ball was not consistently detected in many frames.
+- This happens because the default YOLO model is not specifically trained to detect small, fast-moving objects like a table tennis ball.
+- To improve detection accuracy, we need a **fine-tuned dataset** specifically designed for table tennis ball recognition.
 
-```
-- We need to find a dataset to fill the notebook that we can utilise
+## Setting Up the Training Environment
+### Create a Jupyter Notebook
+1. Create a new directory for training:
+    ```sh
+    mkdir training
+    ```
+2. Navigate to the folder and create a Jupyter notebook:
+    ```sh
+    cd training
+    nano table_tennis_ball_detector_training.ipynb
+    ```
+3. If you don’t have Jupyter installed, install it using pip:
+    ```sh
+    pip3 install jupyter
+    ```
+4. Run the notebook to ensure it works:
+    ```sh
+    jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ipynb
+    ```
 
-## Finding or creating a table tennis ball dataset (Roboflow equivalent).
-- For this part you need an account on Roboflow - where you can download the dataset
-- Looking for a dataset in Roboflow from similar angles as in the video and I found this one
-- we will use the model YoloV5 as this seems to be the best model for detecting table tennis balls and table tennis rackets
-- Click on the model for example YoloV5 - and then look that you have download dataset
-- Then you can choose click download code and YoloV5 Pytorch is fine and press continue
-- In a Jupyter notebook copy and paste the code from the dataset
-- After the file hase been runned - there will be a new folder create called /imagenet-1k_tennis-table-ball/
-- If we want to train the dataset we need to have the exact same folder inside the folder in this case /imagenet-1k_tennis-table-ball/imagenet-1k_tennis-table-ball
-- 
-- https://universe.roboflow.com/madianou-kqrfk/table-tennis-ball-detection/dataset/1
-- 
-## Preparing the dataset for training.
-## Training a custom YOLO model (YOLOv5) on the ball dataset.
-- If you want to train the dataset, a strong advice is to use colab.research.google.com where you have free GPU resources.
-- With colab you can also use larger models - this will take some times - for me it took around 40 seconds per each epoch
-```
+## Finding or Creating a Table Tennis Ball Dataset
+- A dataset is required to train the model for detecting table tennis balls.
+- You can use **Roboflow** to find relevant datasets.
+- A good dataset should contain **images from similar angles** to the video you are analyzing.
+- **Recommended dataset**: [Table Tennis Ball Detection Dataset](https://universe.roboflow.com/madianou-kqrfk/table-tennis-ball-detection/dataset/1)
+- We will use **YOLOv5** for training, as it provides the best detection accuracy for small objects like table tennis balls and rackets.
+
+### Downloading the Dataset from Roboflow
+1. Create an account on Roboflow.
+2. Find a dataset with similar image perspectives.
+3. Click on the dataset and select **YOLOv5 PyTorch** as the export format.
+4. Click **Download Code** and copy the generated code.
+5. Paste the code into a Jupyter notebook and execute it.
+6. After downloading, a new folder will be created: `/imagenet-1k_tennis-table-ball/`.
+7. Ensure the dataset is inside the correct folder structure:
+    ```sh
+    /imagenet-1k_tennis-table-ball/imagenet-1k_tennis-table-ball
+    ```
+
+## Preparing the Dataset for Training
+- Once the dataset is downloaded, organize the files into **training**, **testing**, and **validation** sets.
+- Move the dataset into the **training folder**.
+- Verify that the dataset structure matches YOLO's expected format.
+
+## Training a Custom YOLO Model (YOLOv5) on the Ball Dataset
+- Using **Google Colab** is highly recommended for training, as it provides free GPU resources.
+- YOLOv5 requires setting specific parameters like **image size**, **batch size**, and **epochs**.
+
+### Training on Google Colab
+```sh
 !yolo task=detect mode=train model=yolov5l6u.pt data={dataset.location}/data.yaml epochs=100 imgsz=640
 ```
-- If you want to run it locally and if you not have GPU you can use the below code for the training
-```
+- This command trains the model with:
+  - `100 epochs`
+  - Image size of `640x640`
+  - The `yolov5l6u.pt` model, which is a large version optimized for detection.
+- Training time:
+  - **20 epochs** took **0.335 hours**
+  - **100 epochs** took **1.265 hours**
+
+### Training Locally (For CPU Users)
+```sh
 !yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
 ```
-- This took me 10 minutes - with only 1 epoch and low image size
-- 20 epochs completed in 0.335 hours. - this is on colabs
-- 100 epochs completed in 1.265 hours. - this is on colabs
-- Now we have got files inside /runs/detect/weights that we will use
-- Copy the files last.pt and best.pt to models
-- 
-- 
-## Evaluating and comparing the fine-tuned model's performance.
-- now we can use this in the inferior file that we created from the beginning in the first tutorial and run it on the picture and video
-```
-python3 yolo_inference.py
-```
-- I tried the file trained on 20 epochs and I got a decent results, not good but not bad either - its a small and fast ball
-- But as you see in your output video it´s only the ball that are detected, nothing else - beacause the model is only trained on table tennis ball now
-- We will probably use two models - the one YoloV5 for the detection of the ball, and YoloV8 for detect the players
+- This method is significantly slower, taking around **10 minutes per epoch**.
+
+### Saving the Trained Model
+- Once training is complete, the model weights will be saved inside:
+  ```sh
+  /runs/detect/weights/
+  ```
+- Copy the files `last.pt` and `best.pt` to the **models** directory for later use.
+  ```sh
+  cp runs/detect/weights/best.pt models/
+  cp runs/detect/weights/last.pt models/
+  ```
+
+## Evaluating and Comparing the Fine-Tuned Model’s Performance
+- After training, we will use the model to test its accuracy in detecting table tennis balls in images and videos.
+- Run the inference script to analyze detection results:
+  ```sh
+  python3 yolo_inference.py
+  ```
+- **Results Analysis:**
+  - **Detection Accuracy:** Check how many frames detect the ball correctly.
+  - **False Positives:** Ensure no unwanted objects are classified as balls.
+  - **Frame Consistency:** The ball should be detected across consecutive frames.
+
+## Combining YOLOv5 and YOLOv8 for Comprehensive Analysis
+- Since **YOLOv5** is optimized for **ball detection** and **YOLOv8** is better for **player detection**, we will use both models together.
+- YOLOv5 will be used to **detect the ball**, while YOLOv8 will **track the players**.
+- This combination ensures:
+  - High accuracy in ball tracking.
+  - Player identification with unique IDs.
+
+## Next Steps
+With our fine-tuned model ready, the next tutorial will cover:
+- Integrating **YOLOv5 and YOLOv8** together.
+- Using object tracking to **follow the ball’s motion**.
+- Analyzing ball speed, player movement, and in-game statistics.
+
+This fine-tuned model will significantly improve our table tennis analysis accuracy and consistency!
