@@ -12,20 +12,22 @@
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
 | Writing | Video | Shortname | Requirement |
 |---|---|---|---|
-| ✅ | 🟡 | TL1 | Installing necessary libraries (Ultralytics) |
-| ✅ | 🟡 | TL2 | Understanding YOLO and its basic usage |
-| ✅ | 🟡 | TL3 | Running inference on a sample image and video |
-| ✅ | 🟡 | TL4 | Analyzing the output (bounding boxes, confidence scores, class names)  |
-| ✅ | 🟡 | TL5 | Adapting the model to table tennis |
+| ✅ | 🟡 | TL1-1 | Installing necessary libraries (Ultralytics) |
+| ✅ | 🟡 | TL1-2 | Understanding YOLO and its basic usage |
+| ✅ | 🟡 | TL1-3 | Running inference on a sample image and video |
+| ✅ | 🟡 | TL1-4 | Analyzing the output (bounding boxes, confidence scores, class names)  |
+| ✅ | 🟡 | TL1-5 | Adapting the model to table tennis |
 
 
 ## Tutorial 2
 ### Fine-Tuning the Ball Detection Model:
-- Understanding the need for fine-tuning.
-- Finding or creating a table tennis ball dataset (Roboflow equivalent).
-- Preparing the dataset for training.
-- Training a custom YOLO model (YOLOv5) on the ball dataset.
-- Evaluating and comparing the fine-tuned model's performance.
+| Writing | Video | Shortname | Requirement |
+|---|---|---|---|
+| ✅ | 🟡 | TL2-1 | Understanding the need for fine-tuning |
+| ✅ | 🟡 | TL2-2 | Finding or creating a table tennis ball dataset (Roboflow equivalent) |
+| ✅ | 🟡 | TL2-3 | Preparing the dataset for training |
+| ✅ | 🟡 | TL2-4 | Training a custom YOLO model (YOLOv5) on the ball dataset  |
+| ✅ | 🟡 | TL2-5 | Evaluating and comparing the fine-tuned model's performance |
 
 ## Tutorial 3
 ### Object Tracking and Player Identification:
