@@ -59,5 +59,6 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 ```
 python3 yolo_inference.py
 ```
-
 - I tried the file trained on 20 epochs and I got a decent results, not good but not bad either - its a small and fast ball
+- But as you see in your output video it´s only the ball that are detected, nothing else - beacause the model is only trained on table tennis ball now
+- We will probably use two models - the one YoloV5 for the detection of the ball, and YoloV8 for detect the players
