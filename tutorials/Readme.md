@@ -33,31 +33,36 @@
 ### Object Tracking and Player Identification:
 | Writing | Video | Shortname | Requirement |
 |---|---|---|---|
-| 🟡 | 💤 | TL3-1 | Understanding the concept of object tracking |
-| 🟡 | 💤 | TL3-2 | Using YOLO's tracking capabilities |
-| 🟡 | 💤 | TL3-3 | Assigning unique IDs to players |
-| 🟡 | 💤 | TL3-4 | Applying tracking to table tennis player movements  |
-| 🟡 | 💤 | TL3-5 | Understanding the benifits of tracking for table tennis |
+| ✅ | 💤 | TL3-1 | Understanding the concept of object tracking |
+| ✅ | 💤 | TL3-2 | Using YOLO's tracking capabilities |
+| ✅ | 💤 | TL3-3 | Assigning unique IDs to players |
+| ✅ | 💤 | TL3-4 | Applying tracking to table tennis player movements  |
+| ✅ | 💤 | TL3-5 | Understanding the benifits of tracking for table tennis |
 
 ## Tutorial 4
 ### Court/Table Keypoint Detection (Using PyTorch):
-- Understanding the importance of keypoint detection.
-- Acquiring or creating a table keypoint dataset.
-- Building a custom PyTorch dataset.
-- Training a CNN (ResNet50) to detect keypoints.
-- Understanding loss functions and optimizers.
+| Writing | Video | Shortname | Requirement |
+|---|---|---|---|
+| 💤 | 💤 | TL4-1 | Understanding the importance of keypoint detection |
+| 💤 | 💤 | TL4-2 | Acquiring or creating a table keypoint dataset |
+| 💤 | 💤 | TL4-3 | Building a custom PyTorch dataset |
+| 💤 | 💤 | TL4-4 | Training a CNN (ResNet50) to detect keypoints  |
+| 💤 | 💤 | TL4-5 | Understanding loss functions and optimizers |
 
 ## Tutorial 5
 ### Integrating Models and Calculating Metrics (Ball Speed, Player Movement):
-- Combining the player detection, ball detection, and keypoint detection models.
-- Calculating ball speed and player movement using detected data.
-- Determining if the ball is "in" or "out" using keypoints.
-- Calculating player coverage.
+| Writing | Video | Shortname | Requirement |
+|---|---|---|---|
+| 💤 | 💤 | TL5-1 | Combining the player detection, ball detection, and keypoint detection models |
+| 💤 | 💤 | TL5-2 | Calculating ball speed and player movement using detected data |
+| 💤 | 💤 | TL5-3 | Determining if the ball is "in" or "out" using keypoints |
+| 💤 | 💤 | TL5-4 | Calculating player coverage  |
 
 ## Tutorial 6
 ### Advanced Analysis and Refinement:
-- Analysing shot count, and shot speed.
-- Refining the models for better accuracy.
-- Visualizing the results.
-- Exploring advanced analysis techniques (e.g., player positioning, shot patterns).
-
+| Writing | Video | Shortname | Requirement |
+|---|---|---|---|
+| 💤 | 💤 | TL6-1 | Analysing shot count, and shot speed |
+| 💤 | 💤 | TL6-2 | Refining the models for better accuracy |
+| 💤 | 💤 | TL6-3 | Visualizing the results |
+| 💤 | 💤 | TL6-4 | Exploring advanced analysis techniques (e.g., player positioning, shot patterns)  |
