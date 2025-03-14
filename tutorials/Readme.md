@@ -12,30 +12,32 @@
 ### Setting up the Environment and Basic Object Detection (Table Tennis Players and Ball):
 | Writing | Video | Shortname | Requirement |
 |---|---|---|---|
-| ✅ | 🟡 | TL1-1 | Installing necessary libraries (Ultralytics) |
-| ✅ | 🟡 | TL1-2 | Understanding YOLO and its basic usage |
-| ✅ | 🟡 | TL1-3 | Running inference on a sample image and video |
-| ✅ | 🟡 | TL1-4 | Analyzing the output (bounding boxes, confidence scores, class names)  |
-| ✅ | 🟡 | TL1-5 | Adapting the model to table tennis |
+| ✅ | 💤 | TL1-1 | Installing necessary libraries (Ultralytics) |
+| ✅ | 💤 | TL1-2 | Understanding YOLO and its basic usage |
+| ✅ | 💤 | TL1-3 | Running inference on a sample image and video |
+| ✅ | 💤 | TL1-4 | Analyzing the output (bounding boxes, confidence scores, class names)  |
+| ✅ | 💤 | TL1-5 | Adapting the model to table tennis |
 
 
 ## Tutorial 2
 ### Fine-Tuning the Ball Detection Model:
 | Writing | Video | Shortname | Requirement |
 |---|---|---|---|
-| ✅ | 🟡 | TL2-1 | Understanding the need for fine-tuning |
-| ✅ | 🟡 | TL2-2 | Finding or creating a table tennis ball dataset (Roboflow equivalent) |
-| ✅ | 🟡 | TL2-3 | Preparing the dataset for training |
-| ✅ | 🟡 | TL2-4 | Training a custom YOLO model (YOLOv5) on the ball dataset  |
-| ✅ | 🟡 | TL2-5 | Evaluating and comparing the fine-tuned model's performance |
+| ✅ | 💤 | TL2-1 | Understanding the need for fine-tuning |
+| ✅ | 💤 | TL2-2 | Finding or creating a table tennis ball dataset (Roboflow equivalent) |
+| ✅ | 💤 | TL2-3 | Preparing the dataset for training |
+| ✅ | 💤 | TL2-4 | Training a custom YOLO model (YOLOv5) on the ball dataset  |
+| ✅ | 💤 | TL2-5 | Evaluating and comparing the fine-tuned model's performance |
 
 ## Tutorial 3
 ### Object Tracking and Player Identification:
-💤 Understanding the concept of object tracking.  
-💤 Using YOLO's tracking capabilities.  
-💤 Assigning unique IDs to players.  
-💤 Applying tracking to table tennis player movements.  
-💤 Understanding the benifits of tracking for table tennis.  
+| Writing | Video | Shortname | Requirement |
+|---|---|---|---|
+| 💤 | 💤 | TL3-1 | Understanding the concept of object tracking |
+| 💤 | 💤 | TL3-2 | Using YOLO's tracking capabilities |
+| 💤 | 💤 | TL3-3 | Assigning unique IDs to players |
+| 💤 | 💤 | TL3-4 | Applying tracking to table tennis player movements  |
+| 💤 | 💤 | TL3-5 | Understanding the benifits of tracking for table tennis |
 
 ## Tutorial 4
 ### Court/Table Keypoint Detection (Using PyTorch):
