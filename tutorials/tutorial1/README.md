@@ -1,111 +1,134 @@
-# Tutorial 1
-Setting Up and Basic Object Detection (Table Tennis)
+# Tutorial 1: Setting Up and Basic Object Detection (Table Tennis)
 
-## Introduction (2-3 minutes):
-- Briefly explain the project's goal: analyzing table tennis matches using computer vision.
-- Introduce the tools we'll be using: Python, Ultralytics YOLO.
-- Explain the basic concepts of object detection (bounding boxes, confidence scores).
-## Environment Setup (5-7 minutes):
-- Explain the project folder structure (input videos, output folders).
-  - /input_video/ - here is the material that we will use to validate and test the development we are doing
-  - /output_video/ - here is the output material that are tested and have gone trough the development
-- In the root folder /input_video/ is two clips where we can test the code against
-- Install a virtual environment for python3 first 
-```
+## Introduction (2-3 minutes)
+- The goal of this project is to analyze **table tennis matches** using computer vision.
+- We will use **Ultralytics YOLO**, a state-of-the-art object detection model, to detect and track table tennis objects.
+- Key object detection concepts:
+  - **Bounding boxes**: Rectangles around detected objects.
+  - **Class names**: The object category (e.g., player, ball, racket).
+  - **Confidence scores**: A probability (0-1) indicating detection certainty.
+
+## Environment Setup (5-7 minutes)
+### Project Folder Structure
+- Organize files for easier access:
+  ```
+  /input_videos/     # Video clips for testing and validation
+  /output_videos/    # Processed videos with detections
+  ```
+- The `/input_videos/` folder contains sample clips for testing.
+
+### Installing Dependencies
+#### 1. Install a Python virtual environment:
+```sh
 sudo apt install python3-venv
 ```
-- Create a virtual environment after that
-```
+#### 2. Create and activate the virtual environment:
+```sh
 python3 -m venv tttrace_env
-```
-- Activate the environment
-```
 source tttrace_env/bin/activate
 ```
-- Now install ultralytics
-```
+#### 3. Install Ultralytics YOLO:
+```sh
 pip install ultralytics
 ```
-- To exit from the virtual environment
-```
+#### 4. To exit the virtual environment:
+```sh
 deactivate
 ```
-- Show sample images and videos of table tennis.
+#### 5. Show sample images and videos of table tennis for reference.
 
-## Problem with space because of PIP and Ultralytics
-```
-Configure pip Cache Location:
-
-You can configure pip to use a different cache directory on /dev/sdb.
-Steps:
-Create a directory on /dev/sdb for the pip cache:
+## Handling Limited Storage Issues with PIP and Ultralytics
+If you encounter **storage issues**, configure PIP to use a different cache location:
+```sh
+# Create a new cache directory:
 sudo mkdir -p /mnt/sdb/pip-cache
-Set the PIP_CACHE_DIR environment variable:
+
+# Set the new cache directory:
 export PIP_CACHE_DIR=/mnt/sdb/pip-cache
-Add this line to your .bashrc file (or equivalent) to make it permanent:
+
+# Make this change permanent:
 echo 'export PIP_CACHE_DIR=/mnt/sdb/pip-cache' >> ~/.bashrc
-Run source ~/.bashrc
+source ~/.bashrc
 ```
-## Basic YOLO Inference (10-12 minutes):
-- Create a new file in the folder called yolo_inference.py
-```
+
+## Basic YOLO Inference (10-12 minutes)
+### 1. Create a YOLO inference script
+```sh
 nano yolo_inference.py
 ```
-- Now we will create some code and import the ultralytics that we earlier installed
-```
+### 2. Write the following code:
+```python
 from ultralytics import YOLO
-# To import a YOLO model and which model
+
+# Load the YOLOv8x model
 model = YOLO('yolov8x')
-# To run it on an image - give it the image path, we also want to save it
+
+# Run inference on an image and save the results
 model.predict('input_videos/image.png', save=True)
-# After this code is runned - it will create a new folder called /runs/detect/predict/image.png
 ```
-- Depending how you will do if you run in Visual Studio Code or you run it in the CLI
-- You will need to have a directory with the input_videos/image.png else it will not work
-- For the CLI - this will now download the YOLOv8x model that will be used
-```
+- This will create a **new folder** containing the detected image:
+  ```sh
+  /runs/detect/predict/image.png
+  ```
+
+### 3. Running YOLO inference
+```sh
 python3 yolo_inference.py
 ```
-- Now go to your directory /runs/detect/predict/ - for me the picture was a .jpg file instead. You will also see in the CLI what the YOLO model has detected
-- Look at the picture and you will see the boxes around the objects
-- If you looked at the picture that is created you will find rectangles with the detections that are found in the images with the Yolo model
-- We will now extend the code and improve it - complete code from the above and extended
-```
-from ultralytics import YOLO
-# To import a YOLO model and which model
-model = YOLO('yolov8x')
-# To run it on an image - give it the image path, we also want to save it
-# Store the output in a varible 
-result = model.predict('input_videos/image.png', save=True)
-# After this code is runned - it will create a new folder called /runs/detect/predict2/image.png
-# We can print the result
-print(result)
-# We also print out the bounding boxes
-print("boxes:")
-for box in result[0].boxes:
-  print(box)
-```
-- After you run this the second time you will have a new folder called /predict2/
-- Demonstrate how to load a pre-trained YOLO model (YOLOv8).
-- Run inference on a sample table tennis image.
-- Explain the output: bounding boxes, class names, confidence scores.
-  - Around each object that is detected there is a bounding box
-  - Each bouding box have a class name
-  - Each bounding box also have the confidence score that ranges from 0-1 where higher number is more specific to the trained subject 
-- Show how to save the detection results.
-## Video Inference and Initial Observations (5-8 minutes):
-- Run YOLO inference on a sample table tennis video.
-- Now we can use this little snippet to change the .png to the .mp4 to run it on the video like this
-```
-# To run it on an image - give it the image path, we also want to save it
-# Store the output in a varible 
-result = model.predict('input_videos/image.mp4', save=True)
-# After this code is runned - it will create a new folder called /runs/detect/predict3/image.mp4
-```
-- The file is in the output detect folder - for me i got an .avi file called image.avi
-- Discuss the initial detection results.
-- We will see that the table tennis ball is not recognised as a sports ball many times
-- We will see that the table tennis racket is detected as baseball glove
-- Highlight potential challenges (e.g., fast-moving ball, overlapping players).
-- In the next tutorial we will - Finetune the model so it can detect the small table tennis ball and also the table tennis racket
+- This command **downloads YOLOv8x** (if not already downloaded) and processes the image.
+- The output will be saved in the `/runs/detect/predict/` folder.
+- Open the image to view **bounding boxes** drawn around detected objects.
 
+### 4. Extending the Inference Code
+We can **extend** our script to print detection results:
+```python
+from ultralytics import YOLO
+
+# Load the model
+model = YOLO('yolov8x')
+
+# Run inference on an image and store results
+result = model.predict('input_videos/image.png', save=True)
+
+# Print detected objects
+print(result)
+
+# Print bounding boxes for each detected object
+print("Bounding boxes:")
+for box in result[0].boxes:
+    print(box)
+```
+- Running this script will create a **new prediction folder** (`predict2`).
+- The **output** includes:
+  - **Bounding boxes** around objects.
+  - **Class names** (e.g., person, racket, ball).
+  - **Confidence scores** indicating detection accuracy.
+
+## Video Inference and Initial Observations (5-8 minutes)
+### Running YOLO on a Table Tennis Video
+Modify our script to **process a video** instead of an image:
+```python
+# Run inference on a video and save the results
+result = model.predict('input_videos/image.mp4', save=True)
+```
+- The output video will be saved in:
+  ```sh
+  /runs/detect/predict3/image.avi
+  ```
+- Open the **output video** to observe YOLO's detection in action.
+
+### Observations and Challenges
+- **Detection Issues:**
+  - The **table tennis ball** is **often missed** or not labeled as a "sports ball".
+  - The **racket** may be classified as a **"baseball glove"**.
+- **Challenges:**
+  - The **ball moves too fast** for accurate detection.
+  - Players and objects **overlap**, making tracking harder.
+
+### Preparing for the Next Step
+In the **next tutorial**, we will:
+- **Fine-tune YOLOv5** to better detect **table tennis balls** and **rackets**.
+- Train on a **custom dataset** to improve accuracy.
+- Optimize detection for **fast-moving objects**.
+
+Stay tuned for **Tutorial 2: Fine-Tuning the Ball Detection Model**!
