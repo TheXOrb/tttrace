@@ -51,6 +51,7 @@ jupyter nbconvert --to notebook --execute table_tennis_ball_detector_training.ip
 - 20 epochs completed in 0.335 hours.
 - Now we have got files inside /runs/detect/weights that we will use
 - Copy the files last.pt and best.pt to models
+- I tried the file trained on 20 epochs and I got a decent results, not good but not bad either - its a small and fast ball
 - 
 ## Evaluating and comparing the fine-tuned model's performance.
 - now we can use this in the inferior file that we created from the beginning in the first tutorial
