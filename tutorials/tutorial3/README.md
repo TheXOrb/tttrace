@@ -1,8 +1,10 @@
 # Object Tracking and Player Identification:
 ## Understanding the concept of object tracking
 - The object tracking will look at each bounding boxes for each object in each frames and correlate them
-- We can still use Ultralytics but instead of predict we will use the function track like this
+- We can still use Ultralytics but instead of predict we will use the function track like this, and also use Yolov8x instead of the newly finetuned training
 ```
+model = YOLO(yolov8x)
+
 result = model.track('input_file.mpg', conf=0.2, save=True)
 ```
 ## Using YOLO's tracking capabilities
