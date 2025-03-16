@@ -37,7 +37,7 @@
 | ✅ | 💤 | TL3-2 | Using YOLO's tracking capabilities |
 | ✅ | 💤 | TL3-3 | Assigning unique IDs to players |
 | ✅ | 💤 | TL3-4 | Applying tracking to table tennis player movements  |
-| ✅ | 💤 | TL3-5 | Understanding the benifits of tracking for table tennis |
+| ✅ | 💤 | TL3-5 | Understanding the benefits of tracking for table tennis |
 
 ## Tutorial 4
 ### Court/Table Keypoint Detection (Using PyTorch):
