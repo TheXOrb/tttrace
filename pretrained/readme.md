@@ -51,6 +51,11 @@ torchsummary==1.5.1
 tensorboard==2.14.1
 scikit-learn==1.3.1
 ```
+- In the virtual environment install the following
+```
+sudo apt-get install libturbojpeg0
+pip install PyTurboJPEG
+```
 
 
 ## Files
