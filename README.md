@@ -8,6 +8,10 @@ One challenge we have already stumbled across is detecting the ball due to the h
 ## Objective 
 Detect and track players and table tennis balls in a video.
 
+## Software that maybe needed also 
+- LabelMe - https://github.com/wkentaro/labelme
+- OpenCV - https://github.com/opencv/opencv
+
 ## Features
 - Detect table tennis table key points
 - Measure player positions, distances, and speed
