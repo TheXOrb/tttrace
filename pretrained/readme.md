@@ -19,6 +19,39 @@
 | ✅ | 💤 | TL1-5 | Adapting the model to table tennis |
 
 ## Instructions
+- First go to the repo TTNet Real time
+- Follow the tutorial to setup a virtual environment for Python - https://github.com/maudzung/virtual_environment_python3
+- First run the comman
+```
+git clone https://github.com/maudzung/virtual_environment_python3.git
+```
+- Then follow the guide from the link above
+- Trying to simplify
+```
+python3 -m venv ttnet_env
+```
+- Then activate the environment
+```
+source ttnet_env/bin/activate
+```
+- Download the TTNet repo
+```
+git clone https://github.com/maudzung/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch.git
+```
+- Go into the repo TTNet
+- When trying to install the Pytorch is outdated and is not possible to install
+- In the requirements.txt there is a need to update the file with the following: 
+```
+torch==2.1.0
+torchvision==0.16.0
+easydict==1.10
+opencv-python==4.8.0.76
+numpy==1.26.0
+torchsummary==1.5.1
+tensorboard==2.14.1
+scikit-learn==1.3.1
+```
+
 
 ## Files
 https://drive.google.com/file/d/1y-qtMazXLqJ0UryNlICTgGIQ4z0ZhbMh/view?usp=sharing  
