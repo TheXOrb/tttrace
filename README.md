@@ -3,6 +3,8 @@ Welcome to the TTTrace repository. TTTrace, short for Table Tennis Trace, is a p
 
 This is a hands-on project aimed at exploring and advancing sports analytics in table tennis. I initiated TTTrace to deepen my understanding of machine learning and computer vision, and I welcome contributions from anyone interested in expanding its capabilities. We've integrated YOLO for robust object detection, and I'm developing custom Convolutional Neural Networks (CNNs) for precise table keypoint extraction. If you're interested in contributing, please feel free to reach out!
 
+One challenge we have already stumbled across isd etecting the ball due to the high speed and also the small size. There are recommended way to use approches like sequential model. To predict the ball path or getting higher fps.
+
 ## Objective 
 Detect and track players and table tennis balls in a video.
 
