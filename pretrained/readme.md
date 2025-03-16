@@ -56,6 +56,15 @@ scikit-learn==1.3.1
 sudo apt-get install libturbojpeg0
 pip install PyTurboJPEG
 ```
+- Use the dataset from the links here
+https://drive.google.com/file/d/1y-qtMazXLqJ0UryNlICTgGIQ4z0ZhbMh/view?usp=sharing  
+https://drive.google.com/file/d/14NEW-Rgz6XlVlcVOkWlL7Io6jeeS4SeU/view?usp=sharing  
+https://drive.google.com/file/d/1tt2yO83nhbzSUUSZZTHCH6Z4szsdyoJS/view?usp=sharing
+- Go into the /src/ folder and run the demo
+```
+cd src
+./demo.sh
+```
 
 
 ## Files
