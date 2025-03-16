@@ -69,7 +69,7 @@
 ```sh
 !yolo task=detect mode=train model=yolov5su.pt data={dataset.location}/data.yaml epochs=1 imgsz=320 device=cpu batch=1 workers=0
 ```
-- This method is significantly slower, taking around **10 minutes per epoch**.
+- This method is significantly slower, taking around **10 minutes per epoch** and this is only for the image size of 320.
 
 ### Saving the Trained Model
 - Once training is complete, the model weights will be saved inside:
