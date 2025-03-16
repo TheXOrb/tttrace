@@ -84,6 +84,10 @@
 
 ## Evaluating and Comparing the Fine-Tuned Model’s Performance
 - After training, we will use the model to test its accuracy in detecting table tennis balls in images and videos.
+- In the yolo_inference.py change the model
+```
+mode = YOLO('/models/best-100.pt')
+```
 - Run the inference script to analyze detection results:
   ```sh
   python3 yolo_inference.py
