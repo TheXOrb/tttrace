@@ -64,6 +64,21 @@ pip install PyTurboJPEG
 https://drive.google.com/file/d/1y-qtMazXLqJ0UryNlICTgGIQ4z0ZhbMh/view?usp=sharing  
 https://drive.google.com/file/d/14NEW-Rgz6XlVlcVOkWlL7Io6jeeS4SeU/view?usp=sharing  
 https://drive.google.com/file/d/1tt2yO83nhbzSUUSZZTHCH6Z4szsdyoJS/view?usp=sharing
+- The demo.sh file looks like this - so there are places we need to change things or add files
+```
+python demo.py \
+  --working-dir '../' \
+  --saved_fn 'demo' \
+  --arch 'ttnet' \
+  --gpu_idx 0 \
+  --pretrained_path ../checkpoints/ttnet_3rd_phase/ttnet_3rd_phase_epoch_30.pth \
+  --seg_thresh 0.5 \
+  --event_thresh 0.5 \
+  --thresh_ball_pos_mask 0.05 \
+  --video_path ../dataset/test/videos/test_6.mp4 \
+  --show_image \
+  --save_demo_output
+```
 - Go into the /src/ folder and run the demo
 ```
 cd src
