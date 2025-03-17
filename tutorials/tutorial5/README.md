@@ -33,3 +33,12 @@ from .video_utils import save_video, read_video
 from utils import (read_video,
                    save_video)
 ``` 
+- We can now read in the video and save the video - just to try the functions and see if this works
+```
+def main():
+    input_video_path = "input_videos/image.mp4"
+    video_frames= read_video(input_video_path)
+
+    save_video(video_frames, "output_videos/output.mp4")
+```
+- Create a folder called output_video
