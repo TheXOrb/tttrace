@@ -124,3 +124,9 @@ def draw_bboxes(self, video_frames, player_detections):
 ```
 - In the main functions we need to add some minor parts now in main.py
 ```
+# Draw output
+
+# Draw player bounding boxes
+output_video_frames = player_tracker.draw_bboxes(video_frames, player_detections)
+```
+- In the save video change to the output_video_frames in the main.py 
