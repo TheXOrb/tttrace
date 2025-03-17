@@ -85,4 +85,37 @@ if __name__ == "__main__":
 - Run the script to verify that it correctly processes the video.
 - If successful, we can now continue to add trackers.
 
+## Implement trackers
+- We now need to implement the trackers
+- We start with the player tracker and create a new folder called /tracker/
+- In the folder create a new file called player_tracker.py
+- We create the file and the functions that are needed into this player_tracker.py
+- We then need to expose it outside the function and then we need the __init__.py to fix this
+```
+from .player_tracker import PlayerTracker
+```
+- To use this tracker inside the main.py you need to import it
+```
+from trackers import PlayerTracker
+``` 
+- And in the main function you need to use the PlayerTreacker functions
+```
+# Detect the players
+player_tracker = PlayerTracker(model_path='yolov8x')
+player_detections = player_tracker.detect_frames(video_frames)
+```
+- Now we need to fix the player trackers on top of the original video.
+- That is needed to be done in the player_tracker.py
+- Add a function that are doing this
+```
+import cv2
 
+def draw_bboxes(self, video_frames, player_detections):
+    output_video_frames = []
+    for frame, player_dict in zip(video_frames, player_detections):
+        # Draw bounding boxes
+        for track_id, bbox in player_dict.items[]:
+            x1, y1, x2, y2 = bbox
+            cv2.putText(frame, f"Player ID:" {track_id},(int(bbox[0], int(bbox[1] -10))),cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255 ), 2)
+``` 
+            frame = cv2.rectangle(frame, (int(x1), int(y1), int(x2), int(y2)), (0, 0, 255), 2)
