@@ -1,7 +1,7 @@
-path: tttrace
-train: train
-val: valid
-test: test
+path: tttrace/dataset
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 1  # Number of classes
 names: ['table_tennis_ball']  # Class name from obj.names
