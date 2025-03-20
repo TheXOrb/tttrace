@@ -1,7 +1,7 @@
 path: YOLO-Dataset
-train: images/train
-val: images/val
-test: images/test
+train: train
+val: valid
+test: test
 
 nc: 1  # Number of classes
 names: ['table_tennis_ball']  # Class name from obj.names
