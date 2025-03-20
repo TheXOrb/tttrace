@@ -111,3 +111,27 @@ With our fine-tuned model ready, the next tutorial will cover:
 - Analyzing ball speed, player movement, and in-game statistics.
 
 This fine-tuned model will significantly improve our table tennis analysis accuracy and consistency!
+
+## My training set was maybe not sufficient good 
+- Will need to train a new dataset and I will try to do this
+- We will need the video .mp4
+- We will need ffmpg to extract each frame from the video
+- We will need labelme to finetune the dataset
+- Run the command
+```
+ffmpeg -i din_video.mp4 -vf fps=25 bildruta_%04d.jpg
+```
+- Now you will have a lot of pictures in the folder
+- Skapa en ny mapp med alla bilder
+```
+mkdir table_tennis_balls
+```
+- Start the labelme application
+- Choose the directory where you placed all your pictures
+- Choose to create a rectangle and mark the ball
+- Create the label and mark the ball
+- Annotate the ball
+- Zip all the files
+- Upload the Zip files to chatgpt and convert the file to yolo format
+- 
+- 
