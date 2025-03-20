@@ -1,3 +1,4 @@
+path: tttrace
 train: train
 val: valid
 test: test
