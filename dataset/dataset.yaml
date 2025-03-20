@@ -1,4 +1,3 @@
-path: YOLO-Dataset
 train: train
 val: valid
 test: test
