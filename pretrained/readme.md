@@ -103,7 +103,7 @@ checkpoint = torch.load(pretrained_path, map_location=torch.device('cpu'), weigh
 - I have changed a lot of different files just to get it working on my machine without CUDA - it works - but the results is poor
 - I will try to run the main.py and see how that works with just the cpu
 ```
-python main.py --video_path ../dataset/test/videos/video.mp4 --resume_path ../checkpoints/ttnet_3rd_phase/ttnet_3rd_phase_epoch_30.pth --no_cuda
+python main.py --video_path ../dataset/test/videos/test_1.mp4 --resume_path ../checkpoints/ttnet_3rd_phase/ttnet_3rd_phase_epoch_30.pth --no_cuda
 ```
 
 
