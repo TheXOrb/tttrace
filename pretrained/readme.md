@@ -1,4 +1,48 @@
-# Tutorials Directory
+# Taking on from where people have left and continue to contribute
+- Will be based on this repo: https://github.com/AugustRushG/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch
+- Will try to build it and see what happens
+- Will create a virtual environment in anaconda on windows to try this out first
+- To createa virtual environment in anaconda do this
+```
+conda create --name TTNet
+```
+- To activate the environment do
+```
+conda activate TTNet
+```
+- After this you will have a prompt that looks like (TTNet) first 
+- To deactivate
+```
+conda deactivate
+```
+- To install git
+```
+conda install git
+```
+- To download the repo from August
+```
+git clone https://github.com/AugustRushG/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch.git
+```
+- Now you will have a folder with the TTNet go into it
+```
+cd folder_of_tt_net
+```
+- Now install the requirments first
+```
+pip3 install -U -r requirement.txt
+```
+- Install PyTurboJEPG also if it´s not already installed
+```
+pip3 install PyTurboJPEG
+```
+- To run a demo in anaconda do this, first go into the /src/ folder in the project
+```
+bash demo.sh
+```
+- When i run this in my anaconda environment i get missing cv2 module
+- Will have to look into this
+
+
 
 ## Progress Indication
 - 💤 Not started  
