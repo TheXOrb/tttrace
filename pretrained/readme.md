@@ -29,11 +29,11 @@ cd folder_of_tt_net
 ```
 - Now install the requirments first
 ```
-pip3 install -U -r requirement.txt
+pip install -U -r requirement.txt
 ```
 - Install PyTurboJEPG also if it´s not already installed
 ```
-pip3 install PyTurboJPEG
+pip install PyTurboJPEG
 ```
 - To run a demo in anaconda do this, first go into the /src/ folder in the project
 ```
@@ -45,9 +45,39 @@ conda install -c conda-forge opencv
 ```
 - After this i run into the issue with torch,so installed
 ```
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 - Think we got the demo running now
+- Download the pretrained model in this path   --pretrained_path ../checkpoints/ttnet_3rd_phase/ttnet_3rd_phase_epoch_30.pth \
+- If the directory doesnt exist go from the /src/ to the root folder and create the folder
+```
+mkdir checkpoints
+cd checkpoints
+mkdir ttnet_3rd_phase
+cd ttnet_3rd_phase
+```
+- In this directory download the training set first install gdown
+```
+pip install gdown
+```
+- Now you can take the link from the dataset and download it in the folder
+```
+gdown 1y-qtMazXLqJ0UryNlICTgGIQ4z0ZhbMh
+```
+- Rename the file from the downloaded to the right name like this
+```
+mv initial_file_name.pth ttnet_3rd_phase_epoch_30.pth
+``` 
+- Upload a video to the following path   --video_path ../dataset/test/videos/test_6.mp4 \
+- If the path doesnt exist - create it
+```
+mkdir dataset
+cd dataset
+mkdir test
+cd test
+```
+- Download the video the following folder
+- 
 - Will try to use the pretrained models
 - 
 
