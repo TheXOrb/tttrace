@@ -39,9 +39,17 @@ pip3 install PyTurboJPEG
 ```
 bash demo.sh
 ```
-- When i run this in my anaconda environment i get missing cv2 module
-- Will have to look into this
-
+- When i run this in my anaconda environment i get missing cv2 module, if you get the same error you need to do this
+```
+conda install -c conda-forge opencv
+```
+- After this i run into the issue with torch,so installed
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+- Think we got the demo running now
+- Will try to use the pretrained models
+- 
 
 
 ## Progress Indication
