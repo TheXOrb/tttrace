@@ -68,18 +68,39 @@ gdown 1y-qtMazXLqJ0UryNlICTgGIQ4z0ZhbMh
 ```
 mv initial_file_name.pth ttnet_3rd_phase_epoch_30.pth
 ``` 
-- Upload a video to the following path   --video_path ../dataset/test/videos/test_6.mp4 \
+- Upload a video to the following path   --video_path ../dataset/test/videos/test_1.mp4 or test_6.mp4 \
 - If the path doesnt exist - create it
 ```
 mkdir dataset
 cd dataset
 mkdir test
 cd test
+mkdir videos
+cd videos
 ```
-- Download the video the following folder
-- 
-- Will try to use the pretrained models
-- 
+- Download the video the following folder and you can use the following command
+```
+curl -O https://raw.githubusercontent.com/TheXOrb/tttrace/main/input_videos/videoplayback%20(online-video-cutter.com)%20(1).mp4
+```
+- Rename the file
+```
+mv initial_file_name.mp4 test_6.mp4
+```
+- I have a problem as I dont have GPU from GEFORCE 
+- Cuda is not enabled
+- I need to change in the demo.py to
+```
+model.to("cpu")
+```
+- I need to change the file in the /src/models
+```
+nano models_utils.py
+```
+- And change this row to this
+```
+checkpoint = torch.load(pretrained_path, map_location=torch.device('cpu'), weights_only=False)
+```
+- I have changed a lot of different files just to get it working on my machine without CUDA - it works - but the results is poor 
 
 
 ## Progress Indication
