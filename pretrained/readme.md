@@ -9,6 +9,10 @@
 ```
 !pip install -r requirements.txt
 ```
+- I need to change the requirement a lot -. because here are packages that are needed
+```
+!pip install easydict==1.13 opencv-python-headless==4.10.0.84 numpy==1.26.3 tensorboard==2.17.0 scikit-learn==1.5.1 tqdm==4.66.5 --extra-index-url https://download.pytorch.org/whl/cu121 torch==2.4.0
+```
 - Create a new directory
 ```
 !mkdir -p /content/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch/checkpoints/ttnet_3rd_phase
