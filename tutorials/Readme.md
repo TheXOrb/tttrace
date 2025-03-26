@@ -21,6 +21,8 @@
 
 ## Tutorial 2
 ### Fine-Tuning the Ball Detection Model:
+This was harder than expected - I can fine-tune but the detection is low. 
+Need more learning here.
 | Writing | Video | Shortname | Requirement |
 |---|---|---|---|
 | ✅ | 💤 | TL2-1 | Understanding the need for fine-tuning |
