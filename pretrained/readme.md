@@ -1,4 +1,41 @@
 # Taking on from where people have left and continue to contribute
+## Build on google colab
+- First add this to the row:
+```
+!git clone https://github.com/AugustRushG/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch.git
+%cd TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch
+```
+- Then install the requirements
+```
+!pip install -r requirements.txt
+```
+- Create a new directory
+```
+!mkdir -p /content/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch/checkpoints/ttnet_3rd_phase
+!mkdir -p /content/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch/dataset/test/videos
+
+```
+- Navigate to the directory
+```
+!ls -R /content/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch/checkpoints
+```
+- Install gdown
+```
+!pip install gdown
+```
+- Download the pretrained weight
+```
+!gdown 1tt2yO83nhbzSUUSZZTHCH6Z4szsdyoJS
+```
+- Change the downloaded file to ttnet_3rd_phase_epoch_30.pth and it should be in the ttnet_3rd_phase directory
+- Upload the video to the folder dataset/test/videos and rename the file to test_1.mp4 or test_6.mp4
+- Now we should try to run this with the video and the trained dataset
+```
+!python /content/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch/src/main.py --video_path ../dataset/test/videos/test_1.mp4 --resume_path ../checkpoints/ttnet_3rd_phase/ttnet_3rd_phase_epoch_30.pth
+```
+
+
+## Build on my computer with modification because I dont have any NVIDIA CUDA
 - Will be based on this repo: https://github.com/AugustRushG/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch
 - Will try to build it and see what happens
 - Will create a virtual environment in anaconda on windows to try this out first
