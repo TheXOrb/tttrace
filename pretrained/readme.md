@@ -12,6 +12,7 @@
 - I need to change the requirement a lot -. because here are packages that are needed
 ```
 !pip install easydict==1.13 opencv-python-headless==4.10.0.84 numpy==1.26.3 tensorboard==2.17.0 scikit-learn==1.5.1 tqdm==4.66.5 --extra-index-url https://download.pytorch.org/whl/cu121 torch==2.4.0
+!pip install torch==2.3.0 torchvision==0.18.0 easydict==1.13 opencv-python==4.9.0.80 numpy==1.26.4 torchsummary==1.5.1 tensorboard==2.16.2 scikit-learn==1.5.0
 ```
 - Create a new directory
 ```
